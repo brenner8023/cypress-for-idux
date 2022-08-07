@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["typings/**.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["typings/**.d.ts", "src/**/*", "src/**/*.vue", "cypress/support/**/*.ts*"],
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",

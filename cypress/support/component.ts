@@ -1,7 +1,8 @@
 import { mount } from 'cypress/vue';
-import type { App } from 'vue';
+import { h, type App } from 'vue';
+import { IduxProvider } from '@/components/idux-provider';
 
-import { idux } from '../../src/plugins';
+import { idux } from '@/plugins';
 
 import './commands';
 
@@ -11,11 +12,13 @@ Cypress.Commands.add('mount', (component, options = {}) => {
 
   options.global.plugins.push({
     install(app: App) {
-      app.use(idux)
+      app.use(idux);
     },
-  })
+  });
 
-  return mount(component, options).then(() => {
+  return mount(() => {
+    return h(IduxProvider, {}, h(component as any))
+  }, options).then(() => {
     cy.wrap(Cypress.vueWrapper).as('vue');
   });
 });

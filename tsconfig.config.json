@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.node.json",
-  "include": ["typings/cypress.d.ts", "vite.config.*", "cypress/**/*.ts*", "src/plugins"],
+  "include": ["vite.config.*"],
   "compilerOptions": {
     "composite": true,
     "types": ["node"]
