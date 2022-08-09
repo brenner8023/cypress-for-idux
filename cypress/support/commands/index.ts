@@ -1,5 +1,12 @@
 import { iduxCommands } from './idux';
 
-export type IduxCommands = typeof iduxCommands;
+const customCommands = {
+  ...iduxCommands,
+  getBy(selector: string) {
+    return cy.get(`[data-cy="${selector}"]`);
+  },
+};
 
-Cypress.Commands.addAll(iduxCommands);
+export type CustomCommands = typeof customCommands;
+
+Cypress.Commands.addAll(customCommands);
