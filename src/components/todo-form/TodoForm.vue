@@ -4,11 +4,15 @@
       <IxInput
           control="todo"
           size="lg"
-          placeholder="What needs to be done ?" />
+          placeholder="What needs to be done ?"
+          data-cy="todo-form-input" />
       <IxButton
         mode="link"
         style="margin-left: 16px;"
-        @click="handleSave">Click</IxButton>
+        @click="handleSave"
+        data-cy="todo-form-btn">
+        Click
+      </IxButton>
     </IxFormItem>
   </IxForm>
 </template>
@@ -16,7 +20,9 @@
 <script setup lang="ts">
 import { Validators, useFormGroup } from '@idux/cdk/forms';
 
-const emit = defineEmits<{ (name: 'update:todo', v: string): void }>();
+const emit = defineEmits({
+  'update:todo': (v: string) => v,
+});
 
 const { required } = Validators;
 

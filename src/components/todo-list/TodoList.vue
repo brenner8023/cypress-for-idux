@@ -1,9 +1,16 @@
 <template>
-  <IxList :borderless="false" style="margin-top: 16px;" size="sm">
-    <IxListItem v-for="(item, idx) in listData" :key="item.id">
+  <IxList
+    :borderless="false"
+    style="margin-top: 16px;"
+    size="sm"
+    data-cy="todo-list">
+    <IxListItem
+      v-for="(item, idx) in listData"
+      :key="item.id"
+      data-cy="todo-list-item">
       <div class="list-item-container">
         <div style="display: flex; align-items: center; gap: 4px;">
-          <IxCheckbox v-model:checked="item.checked"></IxCheckbox>
+          <IxCheckbox v-model:checked="item.checked" data-cy="todo-list-checkbox"></IxCheckbox>
           <span :class="item.checked ? 'item-checked' : null">
             {{ item.text }}
           </span>
