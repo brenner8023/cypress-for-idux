@@ -2,7 +2,9 @@
 export default {
   // 输入内容
   iInput_setValue(selector: string, value: number | string) {
-    return cy.getBy(selector).type(String(value));
+    return cy.getBy(selector)
+      .clear()
+      .type(String(value));
   },
   // 断言禁用
   iInput_disabled(selector: string, disabled = true) {
