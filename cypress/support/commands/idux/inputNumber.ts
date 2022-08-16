@@ -1,4 +1,6 @@
 
+import common from './common';
+
 export default {
   // 输入内容
   iInputNumber_setValue(selector: string, value: number | string) {
@@ -8,12 +10,7 @@ export default {
   },
   // 断言禁用
   iInputNumber_disabled(selector: string, disabled = true) {
-    if (disabled) {
-      return cy.getBy(selector)
-        .should('have.attr', 'disabled', 'disabled');
-    }
-    return cy.getBy(selector)
-      .should('not.have.attr', 'disabled');
+    return common.itemDisabled(selector, disabled);
   },
   // 断言readonly
   iInputNumber_readonly(selector: string, readonly = true) {

@@ -1,4 +1,6 @@
 
+import common from './common';
+
 export default {
   // 按钮点击
   iButton_click(selector: string) {
@@ -16,14 +18,7 @@ export default {
   },
   // 断言按钮是否禁用
   iButton_disabled(selector: string, disabled = true) {
-    if (disabled) {
-      return cy.getBy(selector)
-        .should('have.class', 'ix-button-disabled')
-        .should('have.attr', 'disabled');
-    }
-    return cy.getBy(selector)
-      .should('not.have.class', 'ix-button-disabled')
-      .should('not.have.attr', 'disabled');
+    return common.itemDisabled(selector, disabled);
   },
   // 断言按钮是否加载中
   iButton_isLoading(selector: string, isLoading = true) {

@@ -18,7 +18,7 @@ Cypress.Commands.add('mount', (component, options = {}) => {
 
   return mount(
     defineComponent({
-      template: `<IduxProvider><Comp v-bind="$attrs" /></IduxProvider>`,
+      template: `<div><IduxProvider><Comp v-bind="$attrs" /></IduxProvider></div>`,
       components: {
         IduxProvider,
         // @ts-ignore
