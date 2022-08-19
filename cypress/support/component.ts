@@ -1,10 +1,19 @@
 import { mount } from 'cypress/vue';
 import { type App, defineComponent } from 'vue';
+import type { CustomCommands } from './commands';
 import { IduxProvider } from '@/components/idux-provider';
 
 import { idux } from '@/plugins';
 
 import './commands';
+
+declare global {
+  namespace Cypress {
+    interface Chainable extends CustomCommands {
+      mount: typeof mount;
+    }
+  }
+}
 
 Cypress.Commands.add('mount', (component, options = {}) => {
   options.global = options.global || {};
