@@ -28,7 +28,13 @@ Cypress.Commands.add('mount', (component, options = {}) => {
   return mount(
     defineComponent({
       name: 'Wrapper',
-      template: `<div><IduxProvider><Comp v-bind="$attrs" /></IduxProvider></div>`,
+      template: `<div><IduxProvider>
+        <Comp v-bind="$attrs">
+          <template v-for="(_, name) in $slots">
+            <slot :name="name" />
+          </template>
+        </Comp>
+      </IduxProvider></div>`,
       components: {
         IduxProvider,
         // @ts-ignore

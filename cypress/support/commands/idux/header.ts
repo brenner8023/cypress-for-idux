@@ -1,6 +1,4 @@
 
-import common from './common';
-
 export default {
   // 断言标题
   iHeader_haveTitle(selector: string, title: string) {
