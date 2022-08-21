@@ -27,6 +27,7 @@ Cypress.Commands.add('mount', (component, options = {}) => {
 
   return mount(
     defineComponent({
+      name: 'Wrapper',
       template: `<div><IduxProvider><Comp v-bind="$attrs" /></IduxProvider></div>`,
       components: {
         IduxProvider,
