@@ -5,6 +5,7 @@ import iInputNumber from './inputNumber';
 import iRadio from './radio';
 import iHeader from './header';
 import iTag from './tag';
+import iBreadcrumb from './breadcrumb';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -13,4 +14,5 @@ export const iduxCommands = {
   ...iRadio,
   ...iHeader,
   ...iTag,
+  ...iBreadcrumb,
 };
