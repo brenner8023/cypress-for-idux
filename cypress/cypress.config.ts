@@ -7,6 +7,9 @@ export default defineConfig({
     supportFile: 'cypress/support/e2e.ts',
   },
   component: {
+    // 运行卡顿时，可尝试改为false不监听文件改动
+    // watchForFileChanges: false,
+    watchForFileChanges: true,
     devServer: {
       framework: 'vue',
       bundler: 'vite',
