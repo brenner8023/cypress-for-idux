@@ -6,6 +6,7 @@ import iRadio from './radio';
 import iHeader from './header';
 import iTag from './tag';
 import iBreadcrumb from './breadcrumb';
+import iBadge from './badge';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -15,4 +16,5 @@ export const iduxCommands = {
   ...iHeader,
   ...iTag,
   ...iBreadcrumb,
+  ...iBadge,
 };
