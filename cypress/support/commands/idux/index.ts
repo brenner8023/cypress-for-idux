@@ -7,6 +7,7 @@ import iHeader from './header';
 import iTag from './tag';
 import iBreadcrumb from './breadcrumb';
 import iBadge from './badge';
+import iDropdown from './dropdown';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -17,4 +18,5 @@ export const iduxCommands = {
   ...iTag,
   ...iBreadcrumb,
   ...iBadge,
+  ...iDropdown,
 };
