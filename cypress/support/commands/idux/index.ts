@@ -8,6 +8,8 @@ import iTag from './tag';
 import iBreadcrumb from './breadcrumb';
 import iBadge from './badge';
 import iDropdown from './dropdown';
+// import iMenu from './menu';
+import iPagination from './pagination';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -19,4 +21,6 @@ export const iduxCommands = {
   ...iBreadcrumb,
   ...iBadge,
   ...iDropdown,
+  // ...iMenu,
+  ...iPagination,
 };

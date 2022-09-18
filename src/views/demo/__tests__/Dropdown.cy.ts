@@ -7,7 +7,7 @@ describe('component Dropdown', () => {
       .iDropdown_exist('demo-dropdown', false)
       .iDropdown_hover('demo-dropdown-trigger')
       .iDropdown_visible('demo-dropdown')
-      .iDropdown_haveOverlayText('demo-dropdown', 123);
+      .iDropdown_haveOverlayText('demo-dropdown', '123');
   });
 
   it('期望通过点击展示内容', () => {
