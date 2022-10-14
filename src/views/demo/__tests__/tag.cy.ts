@@ -1,4 +1,3 @@
-import { reactive } from 'vue';
 import Tag from '../Tag.vue';
 
 describe('component Tag', () => {
