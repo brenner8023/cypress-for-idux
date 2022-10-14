@@ -11,6 +11,7 @@ import iDropdown from './dropdown';
 // import iMenu from './menu';
 import iPagination from './pagination';
 import iStepper from './stepper';
+import iCascader from './cascader';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -25,4 +26,5 @@ export const iduxCommands = {
   // ...iMenu,
   ...iPagination,
   ...iStepper,
+  ...iCascader,
 };
