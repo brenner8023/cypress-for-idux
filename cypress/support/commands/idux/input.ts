@@ -2,17 +2,17 @@
 import common from './common';
 
 export default {
-  // 输入内容
+  /** 输入内容 */
   iInput_setValue(selector: string, value: number | string) {
     return cy.getBy(selector)
       .clear()
       .type(String(value));
   },
-  // 断言禁用
+  /** 断言禁用 */
   iInput_disabled(selector: string, disabled = true) {
     return common.itemDisabled(selector, disabled);
   },
-  // 断言readonly
+  /** 断言readonly */
   iInput_readonly(selector: string, readonly = true) {
     if (readonly) {
       return cy.getBy(selector)
@@ -21,7 +21,7 @@ export default {
     return cy.getBy(selector)
       .should('not.have.attr', 'readonly');
   },
-  // 清空内容
+  /** 清空内容 */
   iInput_clear(selector: string) {
     return cy.getBy(selector)
       .trigger('mouseover')
@@ -29,19 +29,19 @@ export default {
       .next()
       .click();
   },
-  // 断言placeholder
+  /** 断言placeholder */
   iInput_havePlaceholder(selector: string, placeholder: number | string) {
     return cy.getBy(selector).should('have.attr', 'placeholder', String(placeholder));
   },
-  // 断言内容
+  /** 断言内容 */
   iInput_haveValue(selector: string, value: number | string) {
     return cy.getBy(selector).should('contain.value', String(value));
   },
-  // 聚焦
+  /** 聚焦 */
   iInput_focus(selector: string) {
     return cy.getBy(selector).focus();
   },
-  // 失焦
+  /** 失焦 */
   iInput_blur(selector: string) {
     return cy.getBy(selector).blur();
   },
