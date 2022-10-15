@@ -14,6 +14,7 @@ import iStepper from './stepper';
 import iCascader from './cascader';
 import iCheckbox from './checkbox';
 import iDatePicker from './datePicker';
+import iDateRangePicker from './dateRangePicker';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -31,6 +32,8 @@ export const iduxCommands = {
   ...iCascader,
   ...iCheckbox,
   ...iDatePicker,
+  ...iDateRangePicker,
+
   clickoutside() {
     return cy.get('[data-cy-root]')
       .then($el => {

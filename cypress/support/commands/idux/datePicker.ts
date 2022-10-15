@@ -11,10 +11,10 @@ export default {
     return cy.get(selector)
       .find('input.ix-date-picker-input-inner')
       .then($el => {
-        $el.val('');
         readonly = !!$el.attr('readonly');
         $el.removeAttr('readonly');
       })
+      .clear()
       .type(date)
       .then($el => {
         readonly && $el.attr('readonly', 'readonly');

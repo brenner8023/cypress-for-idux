@@ -4,7 +4,6 @@ import DatePicker from '../DatePicker.vue';
 describe('component DatePicker', () => {
 
   const picker = '[data-cy="demo-date-picker"]';
-  const rangePicker = '[data-cy="demo-date-range-picker"]';
 
   it('期望日期选择功能可用', () => {
     cy.mount(DatePicker)
