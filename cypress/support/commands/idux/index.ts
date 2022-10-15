@@ -13,6 +13,7 @@ import iPagination from './pagination';
 import iStepper from './stepper';
 import iCascader from './cascader';
 import iCheckbox from './checkbox';
+import iDatePicker from './datePicker';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -29,4 +30,11 @@ export const iduxCommands = {
   ...iStepper,
   ...iCascader,
   ...iCheckbox,
+  ...iDatePicker,
+  clickoutside() {
+    return cy.get('[data-cy-root]')
+      .then($el => {
+        $el.trigger('click');
+      });
+  },
 };
