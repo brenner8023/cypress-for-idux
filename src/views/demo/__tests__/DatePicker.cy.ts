@@ -65,6 +65,6 @@ describe('component DatePicker', () => {
     cy.mount(DatePicker, { props: {
       disabledDate: (date: Date) => new Date('2020-02-02').toDateString() === date.toDateString(),
     } })
-    .iDatePicker_disabledDate(picker, '2020-02-02', '2');
+    .iDatePicker_disabledDate(picker, '2020-02-02');
   });
 });

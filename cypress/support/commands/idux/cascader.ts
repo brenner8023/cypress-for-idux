@@ -90,11 +90,11 @@ export default {
     if (searchable) {
       return cy.get(selector)
         .should('have.class', 'ix-selector-searchable')
-        .and('have.class', 'ix-selector-allow-input');
+        .and('have.class', 'ix-selector-searchable');
     }
     return cy.get(selector)
         .should('not.have.class', 'ix-selector-searchable')
-        .and('not.have.class', 'ix-selector-allow-input');
+        .and('not.have.class', 'ix-selector-searchable');
   },
   /** 级联组件搜索 */
   iCascader_search(selector: string, text: string, index = 0) {

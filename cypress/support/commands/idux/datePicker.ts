@@ -63,28 +63,20 @@ export default {
    * 断言指定日期是否被禁用
    * @param selector 日期选择器
    * @param date 禁用的日期
-   * @param cellText 日期显示的最后一位，比如2022-10-15，cellText就是15
    * @returns 
    */
-  iDatePicker_disabledDate(selector: string, date: string, cellText: string) {
-    let cacheVal: number | string | string[] = '';
+  iDatePicker_disabledDate(selector: string, date: string) {
+    let cacheVal = '';
     cy.get(selector)
       .find('input.ix-date-picker-input-inner')
       .then($el => {
-        cacheVal = $el.val() ?? '';
+        cacheVal = $el.val() as string ?? '';
       });
 
-    return cy.iDatePicker_inputDate(selector, date) // 输入指定日期
-      .get(selector)
-      .click() // 点击可以显示浮层
-      .get(pickerOverlay)
-      .find('.ix-date-panel-body')
-      .contains('.ix-date-panel-cell-disabled', cellText) // 断言是否含有该文本
-      .clickoutside() // 点击可以关闭浮层
-      .get(selector)
-      .find('input.ix-date-picker-input-inner')
-      .then($el => {
-        cacheVal ? $el.val(cacheVal) : $el.val(''); // 赋值回原来的值
+    return cy.iDatePicker_inputDate(selector, date)
+      .iDatePicker_haveValue(selector, '')
+      .then(() => {
+        cacheVal && cy.iDatePicker_inputDate(selector, String(cacheVal));
       });
   },
 };
