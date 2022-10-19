@@ -17,6 +17,7 @@ import iDatePicker from './datePicker';
 import iDateRangePicker from './dateRangePicker';
 import iRate from './rate';
 import iSelect from './select';
+import iSlider from './slider';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -37,6 +38,7 @@ export const iduxCommands = {
   ...iDateRangePicker,
   ...iRate,
   ...iSelect,
+  ...iSlider,
 
   clickoutside() {
     return cy.get('[data-cy-root]')
