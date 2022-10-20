@@ -19,6 +19,7 @@ import iRate from './rate';
 import iSelect from './select';
 import iSlider from './slider';
 import iSwitch from './switch';
+import iTextarea from './textarea';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -41,6 +42,7 @@ export const iduxCommands = {
   ...iSelect,
   ...iSlider,
   ...iSwitch,
+  ...iTextarea,
 
   clickoutside() {
     return cy.get('[data-cy-root]')
