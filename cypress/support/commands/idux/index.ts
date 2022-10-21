@@ -20,6 +20,8 @@ import iSelect from './select';
 import iSlider from './slider';
 import iSwitch from './switch';
 import iTextarea from './textarea';
+import iTimePicker from './timePicker';
+// import iTimeRangePicker from './timeRangePicker';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -43,6 +45,8 @@ export const iduxCommands = {
   ...iSlider,
   ...iSwitch,
   ...iTextarea,
+  ...iTimePicker,
+  // ...iTimeRangePicker,
 
   clickoutside() {
     return cy.get('[data-cy-root]')
