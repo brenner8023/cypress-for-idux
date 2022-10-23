@@ -15,5 +15,7 @@ node_modules
 
 cypress/videos
 
+public
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
