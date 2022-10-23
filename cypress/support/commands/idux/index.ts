@@ -26,6 +26,7 @@ import iTransfer from './transfer';
 import iTreeSelect from './treeSelect';
 // import iUpload from './upload';
 import iCard from './card';
+import iCarousel from './carousel';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -55,6 +56,7 @@ export const iduxCommands = {
   ...iTreeSelect,
   // ...iUpload,
   ...iCard,
+  ...iCarousel,
 
   clickoutside() {
     return cy.get('[data-cy-root]')
