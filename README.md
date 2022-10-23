@@ -1,6 +1,58 @@
 # cypress-for-idux
-封装一套组件测试的API供业务线使用
 
-```bash
-cypress run --component --config-file cypress/cypress.config.ts --headed --no-exit
-```
+基于idux组件库封装的Cypress测试套件库
+
+已支持组件：
+- [x] Button 按钮
+- [x] Header 页头
+- [x] Tag 标签
+- [ ] Typography 排版
+- [x] Breadcrumb 面包屑
+- [x] Dropdown 下拉菜单
+- [ ] Menu 导航菜单
+- [x] Pagination 分页
+- [x] Stepper 步骤条
+- [x] Cascader 级联选择
+- [x] Checkbox 复选框
+- [x] DatePicker 日期选择器
+- [x] DateRangePicker 日期范围选择器
+- [x] Input 输入框
+- [x] InputNumber 数字输入框
+- [x] Radio 单选框
+- [x] Rate 评分
+- [x] Select 选择器
+- [x] Slider 滑动输入条
+- [x] Switch 开关
+- [x] Textarea 文本域
+- [x] TimePicker 时间选择器
+- [ ] TimeRangePicker 时间范围选择器
+- [x] Transfer 穿梭框
+- [x] TreeSelect 树型选择器
+- [ ] Upload 文件上传
+- [x] Badge 徽标数
+- [x] Card 卡片
+- [ ] Carousel 轮播图
+- [ ] Collapse 折叠面板
+- [ ] Comment 评论
+- [ ] Empty 空数据
+- [ ] List 列表
+- [ ] Popover 气泡卡片
+- [ ] Statistic 统计数值
+- [ ] Table 表格
+- [ ] Tabs 标签页
+- [ ] Timeline 时间轴
+- [ ] Tooltip 文字提示
+- [ ] Tree 树
+- [ ] Alert 警告提示
+- [ ] Drawer 抽屉
+- [ ] LoadingBar 加载进度条
+- [ ] Message 全局提示
+- [ ] Modal 对话框
+- [ ] Notification 通知提醒
+- [ ] Popconfirm 气泡确认框
+- [ ] Progress 进度条
+- [ ] Result 结果
+- [ ] Spin 加载中
+- [ ] Anchor 锚点
+- [ ] BackTop 回到顶部
+- [ ] Watermark 水印

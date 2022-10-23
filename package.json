@@ -5,6 +5,7 @@
     "dev": "vite",
     "test:e2e": "start-server-and-test preview http://127.0.0.1:4173/ 'cypress open --e2e'",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:4173/ 'cypress run --e2e'",
+    "test:ci-headed": "cypress run --component --config-file cypress/cypress.config.ts --headed --no-exit",
     "test:ci": "cypress run --component --config-file cypress/cypress.config.ts",
     "test": "cypress open --component --config-file cypress/cypress.config.ts --browser chrome"
   },
