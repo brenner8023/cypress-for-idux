@@ -12,6 +12,7 @@
     "@idux/cdk": "1.0.0-rc.9",
     "@idux/components": "1.0.0-rc.9",
     "pinia": "^2.0.14",
+    "vite-plugin-static-copy": "^0.9.0",
     "vue": "^3.2.36",
     "vue-router": "^4.0.15"
   },
