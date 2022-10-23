@@ -23,6 +23,7 @@ import iTextarea from './textarea';
 import iTimePicker from './timePicker';
 // import iTimeRangePicker from './timeRangePicker';
 import iTransfer from './transfer';
+import iTreeSelect from './treeSelect';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -49,6 +50,7 @@ export const iduxCommands = {
   ...iTimePicker,
   // ...iTimeRangePicker,
   ...iTransfer,
+  ...iTreeSelect,
 
   clickoutside() {
     return cy.get('[data-cy-root]')
