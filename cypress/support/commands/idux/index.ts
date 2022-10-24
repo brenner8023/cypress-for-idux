@@ -27,6 +27,7 @@ import iTreeSelect from './treeSelect';
 // import iUpload from './upload';
 import iCard from './card';
 import iCarousel from './carousel';
+import iCollapse from './collapse';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -57,6 +58,7 @@ export const iduxCommands = {
   // ...iUpload,
   ...iCard,
   ...iCarousel,
+  ...iCollapse,
 
   clickoutside() {
     return cy.get('[data-cy-root]')
