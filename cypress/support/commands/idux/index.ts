@@ -28,6 +28,8 @@ import iTreeSelect from './treeSelect';
 import iCard from './card';
 import iCarousel from './carousel';
 import iCollapse from './collapse';
+// import iPopover from './popover';
+import iTable from './table';
 
 export const iduxCommands = {
   ...iInputNumber,
@@ -59,6 +61,8 @@ export const iduxCommands = {
   ...iCard,
   ...iCarousel,
   ...iCollapse,
+  // ...iPopover,
+  ...iTable,
 
   clickoutside() {
     return cy.get('[data-cy-root]')
