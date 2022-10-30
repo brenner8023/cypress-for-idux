@@ -50,7 +50,7 @@ const columns: TableColumn<Data>[] = [
   },
 ];
 
-const data: Data[] = Array.from({ length: 20 }).map((_, index) => ({
+const data: Data[] = Array.from({ length: 18 }).map((_, index) => ({
   key: index,
   name: `mio${index}`,
   age: 18 + index,

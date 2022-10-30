@@ -11,7 +11,6 @@ import iCarousel from './idux/carousel';
 import iCascader from './idux/cascader';
 import iCheckbox from './idux/checkbox';
 import iCollapse from './idux/collapse';
-import iCommon from './idux/common';
 import iDatePicker from './idux/datePicker';
 import iDateRangePicker from './idux/dateRangePicker';
 import iDropdown from './idux/dropdown';
@@ -43,7 +42,6 @@ export const iduxCommands = {
   ...iCascader,
   ...iCheckbox,
   ...iCollapse,
-  ...iCommon,
   ...iDatePicker,
   ...iDateRangePicker,
   ...iDropdown,

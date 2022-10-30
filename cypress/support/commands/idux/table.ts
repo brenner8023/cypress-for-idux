@@ -37,6 +37,10 @@ export default {
       .find('.ix-table-thead .ix-table-cell')
       .eq(col);
   },
+  /** 获取表格的分页器 */
+  iTable_getPagination(selector: string) {
+    return cy.get(selector).find('.ix-table-pagination');
+  },
   /** 点击跳到下一页 */
   iTable_clickToNext(selector: string) {
     return cy.get(selector)

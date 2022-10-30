@@ -1,5 +1,5 @@
 
-import common from './common';
+import common from './private';
 
 export default {
   /** 按钮点击 */
