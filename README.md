@@ -38,7 +38,7 @@
 - [ ] List 列表
 - [ ] Popover 气泡卡片
 - [ ] Statistic 统计数值
-- [ ] Table 表格
+- [x] Table 表格
 - [ ] Tabs 标签页
 - [ ] Timeline 时间轴
 - [ ] Tooltip 文字提示

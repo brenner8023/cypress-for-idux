@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { TableColumn } from '@idux/components/table';
+import type { TableColumn, TableColumnSelectable } from '@idux/components/table';
 
 interface Data {
   key: number;
@@ -24,7 +24,14 @@ interface Data {
   address: string;
 }
 
+const selectableColumn: TableColumnSelectable<Data> = {
+  type: 'selectable',
+  disabled: record => record.key === 4,
+  multiple: true,
+};
+
 const columns: TableColumn<Data>[] = [
+  selectableColumn,
   {
     type: 'expandable',
     disabled: () => false,
@@ -38,6 +45,9 @@ const columns: TableColumn<Data>[] = [
   {
     title: 'Age',
     dataKey: 'age',
+    sortable: {
+      sorter: (curr, next) => curr.age - next.age,
+    },
   },
   {
     title: 'Address',

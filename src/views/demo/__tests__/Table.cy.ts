@@ -7,10 +7,10 @@ describe('component Table', () => {
   it('期望表格数据展示正常', () => {
     cy.mount(Demo)
       .iTable_haveRows(selector, 10)
-      .iTable_haveCols(selector, 5)
-      .iTable_getCell(selector, [1, 1])
+      .iTable_haveCols(selector, 6)
+      .iTable_getCell(selector, [1, 2])
       .should('contain.text', 'mio1')
-      .iTable_getHeaderCell(selector, 1)
+      .iTable_getHeaderCell(selector, 2)
       .should('contain.text', 'Name');
   });
 
@@ -33,5 +33,35 @@ describe('component Table', () => {
       .iTable_toggleRowExpand(selector, 0)
       .iTable_getExpandedRow(selector, 0)
       .should('contain.text', 'expanded:mio0');
+  });
+
+  it('期望表格可以选中数据', () => {
+    cy.mount(Demo)
+      .iTable_isRowSelected(selector, 1, false)
+      .iTable_getCheckbox(selector, 1)
+      .then($el => {
+        cy.iCheckbox_check($el)
+          .iTable_isRowSelected(selector, 1)
+      })
+      .iTable_toggleSelectAll(selector)
+      .iTable_isRowSelected(selector, 0)
+      .iTable_isRowSelected(selector, 1)
+      .iTable_toggleSelectAll(selector)
+      .iTable_isRowSelected(selector, 0, false)
+      .iTable_isRowSelected(selector, 1, false)
+      .iTable_getCheckbox(selector, 4)
+      .then($el => {
+        cy.iCheckbox_disabled($el);
+      });
+  });
+
+  it('期望表格可以进行排序', () => {
+    cy.mount(Demo)
+      .iTable_getCell(selector, [0, 3])
+      .should('contain.text', 18)
+      .iTable_clickToSort(selector, 3)
+      .iTable_clickToSort(selector, 3)
+      .iTable_getCell(selector, [0, 3])
+      .should('contain.text', 35);
   });
 });

@@ -65,19 +65,17 @@ export default {
       .find('.ix-table-thead .ix-table-selectable')
       .click();
   },
-  /** 点击选中某行或者取消选中某一行 */
-  iTableCheckboxSelect_click(selector: string, row: number) {
+  /** 获取某一行的勾选框 */
+  iTable_getCheckbox(selector: string, row: number) {
     return cy.iTable_getRow(selector, row)
       .find('.ix-checkbox')
-      .first()
-      .click();
+      .first();
   },
-  /** 点击选中某行或者取消选中某一行 */
-  iTableRadioSelect_click(selector: string, row: number) {
+  /** 获取某一行的单选框 */
+  iTable_getRadio(selector: string, row: number) {
     return cy.iTable_getRow(selector, row)
       .find('.ix-radio')
-      .first()
-      .click();
+      .first();
   },
   /** 点击进行筛选 */
   iTable_clickToFilter(selector: string, col: number) {
