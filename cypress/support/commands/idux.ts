@@ -1,8 +1,5 @@
 
-/**
- * @file auto generate
- */
-
+import iAlert from './idux/alert';
 import iBadge from './idux/badge';
 import iBreadcrumb from './idux/breadcrumb';
 import iButton from './idux/button';
@@ -63,6 +60,6 @@ export const iduxCommands = {
   ...iTransfer,
   ...iTreeSelect,
   ...iUpload,
-  
+  ...iAlert,
 };
 

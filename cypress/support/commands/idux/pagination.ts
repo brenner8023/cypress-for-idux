@@ -12,7 +12,13 @@ export default {
   },
   /** 断言总页数 */
   iPagination_haveTotal(selector: ContainerSelector, total: number) {
-    return getContainer(selector).find('.ix-pagination-total').should('contain.text', String(total));
+    const parent = getContainer(selector);
+    return parent.then($el => {
+      const isSimple = $el.hasClass('ix-pagination-simple');
+      isSimple ?
+        parent.contains('.ix-pagination-item', `/${total}`) :
+        parent.find('.ix-pagination-total').should('contain.text', String(total));
+    });
   },
   /** 断言当前激活的页码 */
   iPagination_activePage(selector: ContainerSelector, page: number) {
