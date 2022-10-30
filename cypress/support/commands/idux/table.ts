@@ -41,22 +41,6 @@ export default {
   iTable_getPagination(selector: string) {
     return cy.get(selector).find('.ix-table-pagination');
   },
-  /** 点击跳到下一页 */
-  iTable_clickToNext(selector: string) {
-    return cy.get(selector)
-      .find('.ix-table-pagination')
-      .find('.ix-pagination-item-button')
-      .last()
-      .click();
-  },
-  /** 点击跳到上一页 */
-  iTable_clickToPrev(selector: string) {
-    return cy.get(selector)
-      .find('.ix-table-pagination')
-      .find('.ix-pagination-item-button')
-      .first()
-      .click();
-  },
   /** 展开或者收起指定行 */
   iTable_toggleRowExpand(selector: string, row: number) {
     return cy.iTable_getRow(selector, row)

@@ -9,7 +9,7 @@
       <a>Delete</a>
     </template>
     <template #expand="{ record }">
-      <span>{{ record.name }}</span>
+      <span>expanded:{{ record.name }}</span>
     </template>
   </IxTable>
 </template>
