@@ -40,10 +40,10 @@
 - [ ] Statistic 统计数值
 - [x] Table 表格
 - [ ] Tabs 标签页
-- [ ] Timeline 时间轴
+- [x] Timeline 时间轴
 - [ ] Tooltip 文字提示
 - [ ] Tree 树
-- [ ] Alert 警告提示
+- [x] Alert 警告提示
 - [ ] Drawer 抽屉
 - [ ] LoadingBar 加载进度条
 - [ ] Message 全局提示
