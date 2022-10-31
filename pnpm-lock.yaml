@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@idux/cdk': 1.0.0-rc.9
-  '@idux/components': 1.0.0-rc.9
+  '@idux/cdk': 1.0.2
+  '@idux/components': 1.0.2
   '@types/jsdom': ^16.2.14
   '@types/node': ^16.11.47
   '@vitejs/plugin-vue': ^2.3.3
@@ -21,8 +21,8 @@ specifiers:
   vue-tsc: ^0.35.2
 
 dependencies:
-  '@idux/cdk': 1.0.0-rc.9_vue@3.2.37
-  '@idux/components': 1.0.0-rc.9_vue@3.2.37
+  '@idux/cdk': 1.0.2_vue@3.2.37
+  '@idux/components': 1.0.2_vue@3.2.37
   pinia: 2.0.17_j6bzmzd4ujpabbp5objtwxyjp4
   vite-plugin-static-copy: 0.9.0_vite@2.9.14
   vue: 3.2.37
@@ -115,6 +115,16 @@ packages:
     requiresBuild: true
     optional: true
 
+  /@floating-ui/core/1.0.1:
+    resolution: {integrity: sha512-bO37brCPfteXQfFY0DyNDGB3+IMe4j150KFQcgJ5aBP295p9nBGeHEs/p0czrRbtlHq4Px/yoPXO/+dOCcF4uA==}
+    dev: false
+
+  /@floating-ui/dom/1.0.4:
+    resolution: {integrity: sha512-maYJRv+sAXTy4K9mzdv0JPyNW5YPVHrqtY90tEdI6XNpuLOP26Ci2pfwPsKBA/Wh4Z3FX5sUrtUFTdMYj9v+ug==}
+    dependencies:
+      '@floating-ui/core': 1.0.1
+    dev: false
+
   /@hapi/hoek/9.3.0:
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
     dev: true
@@ -125,23 +135,22 @@ packages:
       '@hapi/hoek': 9.3.0
     dev: true
 
-  /@idux/cdk/1.0.0-rc.9_vue@3.2.37:
-    resolution: {integrity: sha512-nR1421c0Nf82Jb5tOJvGEguGd0Q7ye8tyPSxDg7DoL66cg4+ZrxPx9ezSn0Oh5T9wweJGG93Y1xX6fCk9UzuYA==}
+  /@idux/cdk/1.0.2_vue@3.2.37:
+    resolution: {integrity: sha512-aJvSUYMQBSfKQ62UKA413A1vSpQvSm9G9bBNbcn8ejDjrbE/E640+reF+LO6PGTKDZeg+8cqEaBLiKglR5Hybg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@popperjs/core': 2.11.5
+      '@floating-ui/dom': 1.0.4
       lodash-es: 4.17.21
       vue: 3.2.37
     dev: false
 
-  /@idux/components/1.0.0-rc.9_vue@3.2.37:
-    resolution: {integrity: sha512-9SHbKw9AsPdR8V0ADt3RXrTQNZnXas9VxHNrIB3duJGUg5EzGHKBnvxTM3GOWqVs3+4y0sfdtPkwAiMkf+Cv3Q==}
-    hasBin: true
+  /@idux/components/1.0.2_vue@3.2.37:
+    resolution: {integrity: sha512-qSrtIOXxuOHSniqEdh796kTGsjldbVNR+0MzUeLSv6u+VdTbmYb7vhlDNEl6zRt1BXx8BN5Sk3rns4XIpML7EA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@idux/cdk': 1.0.0-rc.9_vue@3.2.37
+      '@idux/cdk': 1.0.2_vue@3.2.37
       date-fns: 2.29.1
       lodash-es: 4.17.21
       vue: 3.2.37
@@ -166,10 +175,6 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
-    dev: false
-
-  /@popperjs/core/2.11.5:
-    resolution: {integrity: sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw==}
     dev: false
 
   /@sideway/address/4.1.4:

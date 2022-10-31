@@ -26,6 +26,7 @@ import iTable from './idux/table';
 import iTag from './idux/tag';
 import iTextarea from './idux/textarea';
 import iTimePicker from './idux/timePicker';
+import iTimeRangePicker from './idux/timeRangePicker';
 import iTransfer from './idux/transfer';
 import iTreeSelect from './idux/treeSelect';
 import iUpload from './idux/upload';
@@ -58,6 +59,7 @@ export const iduxCommands = {
   ...iTag,
   ...iTextarea,
   ...iTimePicker,
+  ...iTimeRangePicker,
   ...iTransfer,
   ...iTreeSelect,
   ...iUpload,
