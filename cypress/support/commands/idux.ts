@@ -32,6 +32,7 @@ import iTreeSelect from './idux/treeSelect';
 import iUpload from './idux/upload';
 import iTimeline from './idux/timeline';
 import iTab from './idux/tab';
+import iModal from './idux/modal';
 
 export const iduxCommands = {
   ...iBadge,
@@ -67,5 +68,6 @@ export const iduxCommands = {
   ...iAlert,
   ...iTimeline,
   ...iTab,
+  ...iModal,
 };
 

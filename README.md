@@ -62,7 +62,7 @@
 - [ ] Drawer 抽屉
 - [ ] LoadingBar 加载进度条
 - [ ] Message 全局提示
-- [ ] Modal 对话框
+- [x] Modal 对话框
 - [ ] Notification 通知提醒
 - [ ] Popconfirm 气泡确认框
 - [ ] Progress 进度条
