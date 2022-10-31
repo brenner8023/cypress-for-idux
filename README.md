@@ -40,7 +40,7 @@
 - [x] Switch 开关
 - [x] Textarea 文本域
 - [x] TimePicker 时间选择器
-- [ ] TimeRangePicker 时间范围选择器
+- [x] TimeRangePicker 时间范围选择器
 - [x] Transfer 穿梭框
 - [x] TreeSelect 树型选择器
 - [ ] Upload 文件上传
@@ -54,7 +54,7 @@
 - [ ] Popover 气泡卡片
 - [ ] Statistic 统计数值
 - [x] Table 表格
-- [ ] Tabs 标签页
+- [x] Tabs 标签页
 - [x] Timeline 时间轴
 - [ ] Tooltip 文字提示
 - [ ] Tree 树

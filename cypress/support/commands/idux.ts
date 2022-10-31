@@ -31,6 +31,7 @@ import iTransfer from './idux/transfer';
 import iTreeSelect from './idux/treeSelect';
 import iUpload from './idux/upload';
 import iTimeline from './idux/timeline';
+import iTab from './idux/tab';
 
 export const iduxCommands = {
   ...iBadge,
@@ -65,5 +66,6 @@ export const iduxCommands = {
   ...iUpload,
   ...iAlert,
   ...iTimeline,
+  ...iTab,
 };
 
