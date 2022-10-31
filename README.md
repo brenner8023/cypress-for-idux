@@ -1,6 +1,6 @@
 # cypress-for-idux
 
-基于idux组件库封装的Cypress测试套件库
+基于idux组件库封装的Cypress测试指令库
 
 ## 主要代码结构
 
