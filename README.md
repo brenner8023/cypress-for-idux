@@ -60,8 +60,8 @@
 - [ ] Tree 树
 - [x] Alert 警告提示
 - [x] Drawer 抽屉
-- [ ] LoadingBar 加载进度条
-- [ ] Message 全局提示
+- [ ] LoadingBar 加载进度条（不需要添加指令）
+- [x] Message 全局提示
 - [x] Modal 对话框
 - [ ] Notification 通知提醒
 - [ ] Popconfirm 气泡确认框
