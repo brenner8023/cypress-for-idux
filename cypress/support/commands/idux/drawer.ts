@@ -1,5 +1,5 @@
 
-const selector = '.ix-drawer-wrapper:visible';
+const selector = '.ix-drawer-wrapper .ix-drawer:visible';
 
 export default {
   /** 断言header文本 */

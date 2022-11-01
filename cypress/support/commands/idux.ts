@@ -34,6 +34,7 @@ import iTimeline from './idux/timeline';
 import iTab from './idux/tab';
 import iModal from './idux/modal';
 import iDrawer from './idux/drawer';
+import iMessage from './idux/message';
 
 export const iduxCommands = {
   ...iBadge,
@@ -71,5 +72,6 @@ export const iduxCommands = {
   ...iTab,
   ...iModal,
   ...iDrawer,
+  ...iMessage,
 };
 
