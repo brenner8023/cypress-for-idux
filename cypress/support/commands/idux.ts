@@ -33,6 +33,7 @@ import iUpload from './idux/upload';
 import iTimeline from './idux/timeline';
 import iTab from './idux/tab';
 import iModal from './idux/modal';
+import iDrawer from './idux/drawer';
 
 export const iduxCommands = {
   ...iBadge,
@@ -69,5 +70,6 @@ export const iduxCommands = {
   ...iTimeline,
   ...iTab,
   ...iModal,
+  ...iDrawer,
 };
 
