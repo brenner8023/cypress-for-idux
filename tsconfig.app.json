@@ -2,6 +2,7 @@
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": ["typings/**.d.ts", "src/**/*", "src/**/*.vue", "cypress/support/**/*.ts*"],
   "compilerOptions": {
+    "types": ["cypress-real-events"],
     "composite": true,
     "baseUrl": ".",
     "paths": {

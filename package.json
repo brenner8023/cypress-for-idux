@@ -10,8 +10,9 @@
     "test": "cypress open --component --config-file cypress/cypress.config.ts --browser chrome"
   },
   "dependencies": {
-    "@idux/cdk": "1.0.2",
-    "@idux/components": "1.0.2",
+    "@idux/cdk": "latest",
+    "@idux/components": "latest",
+    "cypress-real-events": "^1.7.1",
     "pinia": "^2.0.14",
     "vite-plugin-static-copy": "^0.9.0",
     "vue": "^3.2.36",
