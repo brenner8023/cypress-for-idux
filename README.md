@@ -65,7 +65,7 @@
 - [ ] Popconfirm 气泡确认框
 - [ ] Progress 进度条
 - [ ] Result 结果
-- [ ] Spin 加载中
+- [x] Spin 加载中
 - [ ] Anchor 锚点
 - [ ] BackTop 回到顶部
 - [ ] Watermark 水印

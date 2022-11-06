@@ -1,7 +1,7 @@
 
 import { defineComponent } from 'vue';
 
-describe('component Popover', () => {
+describe('component Statistic', () => {
 
   const Demo = defineComponent({
     template: `
