@@ -21,10 +21,9 @@
 - [x] Button 按钮
 - [x] Header 页头
 - [x] Tag 标签
-- [ ] Typography 排版
 - [x] Breadcrumb 面包屑
 - [x] Dropdown 下拉菜单
-- [ ] Menu 导航菜单
+- [x] Menu 导航菜单
 - [x] Pagination 分页
 - [x] Stepper 步骤条
 - [x] Cascader 级联选择
@@ -52,7 +51,7 @@
 - [ ] Empty 空数据
 - [ ] List 列表
 - [ ] Popover 气泡卡片
-- [ ] Statistic 统计数值
+- [x] Statistic 统计数值
 - [x] Table 表格
 - [x] Tabs 标签页
 - [x] Timeline 时间轴
@@ -60,7 +59,6 @@
 - [ ] Tree 树
 - [x] Alert 警告提示
 - [x] Drawer 抽屉
-- [ ] LoadingBar 加载进度条（不需要添加指令）
 - [x] Message 全局提示
 - [x] Modal 对话框
 - [ ] Notification 通知提醒

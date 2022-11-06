@@ -36,6 +36,7 @@ import iModal from './idux/modal';
 import iDrawer from './idux/drawer';
 import iMessage from './idux/message';
 import iMenu from './idux/menu';
+import iStatistic from './idux/statistic';
 
 export const iduxCommands = {
   ...iBadge,
@@ -75,5 +76,6 @@ export const iduxCommands = {
   ...iDrawer,
   ...iMessage,
   ...iMenu,
+  ...iStatistic,
 };
 
