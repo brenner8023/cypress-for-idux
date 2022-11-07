@@ -47,7 +47,7 @@
 - [x] Card 卡片
 - [x] Carousel 轮播图
 - [x] Collapse 折叠面板
-- [ ] Comment 评论
+- [x] Comment 评论
 - [ ] Empty 空数据
 - [ ] List 列表
 - [ ] Popover 气泡卡片

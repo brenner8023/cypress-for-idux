@@ -38,6 +38,7 @@ import iMessage from './idux/message';
 import iMenu from './idux/menu';
 import iStatistic from './idux/statistic';
 import iSpin from './idux/spin';
+import iComment from './idux/comment';
 
 export const iduxCommands = {
   ...iBadge,
@@ -79,5 +80,6 @@ export const iduxCommands = {
   ...iMenu,
   ...iStatistic,
   ...iSpin,
+  ...iComment,
 };
 
