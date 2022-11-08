@@ -15,6 +15,12 @@ const customCommands = {
   },
 };
 
-export type CustomCommands = typeof customCommands;
+type CustomCommands = typeof customCommands;
+
+declare global {
+  namespace Cypress {
+    interface Chainable extends CustomCommands {}
+  }
+}
 
 Cypress.Commands.addAll(customCommands);

@@ -1,6 +1,5 @@
 import { mount } from 'cypress/vue';
 import { type App, defineComponent } from 'vue';
-import type { CustomCommands } from './commands';
 import { IduxProvider } from '@/components/idux-provider';
 import 'cypress-real-events/support';
 import { idux } from '@/plugins';
@@ -9,7 +8,7 @@ import './commands';
 
 declare global {
   namespace Cypress {
-    interface Chainable extends CustomCommands {
+    interface Chainable {
       mount: typeof mount;
     }
   }
@@ -44,7 +43,5 @@ Cypress.Commands.add('mount', (component, options = {}) => {
     options,
   ).then(() => {
     cy.wrap(Cypress.vueWrapper).as('vue');
-
-    Cypress.vueWrapper.setProps
   });
 });
