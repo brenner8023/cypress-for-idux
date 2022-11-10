@@ -48,7 +48,7 @@
 - [x] Carousel 轮播图
 - [x] Collapse 折叠面板
 - [x] Comment 评论
-- [ ] Empty 空数据
+- [x] Empty 空数据
 - [ ] List 列表
 - [ ] Popover 气泡卡片
 - [x] Statistic 统计数值
