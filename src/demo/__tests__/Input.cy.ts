@@ -1,11 +1,14 @@
 import Input from '../Input.vue';
 
 describe('component Input', () => {
+
+  const selector = '[data-cy="demo-input"]';
+
   it('期望内容为123', () => {
     cy.mount(Input)
-      .iInput_haveValue('demo-input', '123')
-      .iInput_setValue('demo-input', '567')
-      .iInput_haveValue('demo-input', '567');
+      .iInput_haveValue(selector, '123')
+      .iInput_setValue(selector, '567')
+      .iInput_haveValue(selector, '567');
   });
 
   it('期望输入框禁用', () => {
@@ -14,10 +17,10 @@ describe('component Input', () => {
         disabled: true,
       },
     })
-      .iInput_disabled('demo-input')
+      .iInput_disabled(selector)
       .get('@vue')
       .invoke('setProps', { disabled: false })
-      .iInput_disabled('demo-input', false);
+      .iInput_disabled(selector, false);
   });
 
   it('期望输入框只读', () => {
@@ -26,10 +29,10 @@ describe('component Input', () => {
         readonly: true,
       },
     })
-      .iInput_readonly('demo-input')
+      .iInput_readonly(selector)
       .get('@vue')
       .invoke('setProps', { readonly: false })
-      .iInput_readonly('demo-input', false);
+      .iInput_readonly(selector, false);
   });
 
   it('期望placeholder展示abc', () => {
@@ -38,10 +41,10 @@ describe('component Input', () => {
         placeholder: 'abc',
       },
     })
-      .iInput_havePlaceholder('demo-input', 'abc')
+      .iInput_havePlaceholder(selector, 'abc')
       .get('@vue')
       .invoke('setProps', { placeholder: 'xyz' })
-      .iInput_havePlaceholder('demo-input', 'xyz');
+      .iInput_havePlaceholder(selector, 'xyz');
   });
 
   it('清空内容', () => {
@@ -50,14 +53,14 @@ describe('component Input', () => {
         clearable: true,
       },
     })
-      .iInput_haveValue('demo-input', '123')
-      .iInput_clear('demo-input')
-      .iInput_haveValue('demo-input', '');
+      .iInput_haveValue(selector, '123')
+      .iInput_clear(selector)
+      .iInput_haveValue(selector, '');
   });
 
   it('聚焦、失焦', () => {
     cy.mount(Input)
-      .iInput_focus('demo-input')
-      .iInput_blur('demo-input');
+      .iInput_focus(selector)
+      .iInput_blur(selector);
   });
 });

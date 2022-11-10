@@ -1,9 +1,12 @@
 import Tag from '../Tag.vue';
 
 describe('component Tag', () => {
+
+  const selector = '[data-cy="demo-tag"]';
+
   it('期望展示文本', () => {
     cy.mount(Tag, { slots: { default: () => 'abc' } })
-      .iTag_haveText('demo-tag', 'abc');
+      .iTag_haveText(selector, 'abc');
   });
 
   it('期望展示数字', () => {
@@ -13,10 +16,12 @@ describe('component Tag', () => {
       },
       slots: { default: () => 'abc' },
     })
-      .iTag_haveNumber('demo-tag', 5);
+      .iTag_haveNumber(selector, 5);
   });
 
   describe('component TagGroup', () => {
+    const selector = '[data-cy="demo-tag-group"]';
+
     it('点击', () => {
       cy.mount(Tag, {
         props: {
@@ -33,7 +38,7 @@ describe('component Tag', () => {
           onClick: cy.spy().as('tagClick'),
         },
       })
-        .iTagGroup_clickItem('demo-tag-group', 'dnf')
+        .iTagGroup_clickItem(selector, 'dnf')
         .get('@tagClick')
         .should('be.calledOnce');
     });
@@ -55,7 +60,7 @@ describe('component Tag', () => {
           onClose: cy.spy().as('closeTag')
         },
       })
-        .iTagGroup_closeItem('demo-tag-group', 'dnf')
+        .iTagGroup_closeItem(selector, 'dnf')
         .get('@closeTag')
         .should('be.calledOnce');
     });

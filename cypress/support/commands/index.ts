@@ -9,10 +9,6 @@ const customCommands = {
         $el.trigger('click');
       });
   },
-
-  getBy(selector: string) {
-    return cy.get(`[data-cy="${selector}"]`);
-  },
 };
 
 type CustomCommands = typeof customCommands;

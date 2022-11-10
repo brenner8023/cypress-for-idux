@@ -1,6 +1,8 @@
 import Header from '../Header.vue';
 
 describe('component Header', () => {
+  const selector = '[data-cy="demo-header"]';
+
   it('期望展示文本', () => {
     cy.mount(Header, {
       props: {
@@ -9,18 +11,18 @@ describe('component Header', () => {
         description: '789',
       },
     })
-      .iHeader_haveTitle('demo-header', '123')
-      .iHeader_haveSubtitle('demo-header', '456')
-      .iHeader_haveDescription('demo-header', '789')
+      .iHeader_haveTitle(selector, '123')
+      .iHeader_haveSubtitle(selector, '456')
+      .iHeader_haveDescription(selector, '789')
       .get('@vue')
       .invoke('setProps', {
         title: '123a',
         subTitle: '456b',
         description: '789c',
       })
-      .iHeader_haveTitle('demo-header', '123a')
-      .iHeader_haveSubtitle('demo-header', '456b')
-      .iHeader_haveDescription('demo-header', '789c')
+      .iHeader_haveTitle(selector, '123a')
+      .iHeader_haveSubtitle(selector, '456b')
+      .iHeader_haveDescription(selector, '789c')
   });
 
   it('期望禁用', () => {
@@ -30,9 +32,9 @@ describe('component Header', () => {
         disabled: true,
       },
     })
-      .iHeader_disabled('demo-header')
+      .iHeader_disabled(selector)
       .get('@vue')
       .invoke('setProps', { disabled: false })
-      .iHeader_disabled('demo-header', false)
+      .iHeader_disabled(selector, false)
   });
 });

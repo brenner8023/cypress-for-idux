@@ -1,12 +1,15 @@
 import Radio from '../Radio.vue';
 
 describe('component Radio', () => {
+
+  const selector = '[data-cy="demo-radio"]';
+
   it('期望checked', () => {
     cy.mount(Radio)
-      .iRadio_isChecked('demo-radio', false)
+      .iRadio_isChecked(selector, false)
       .get('@vue')
       .invoke('setProps', { checked: true })
-      .iRadio_isChecked('demo-radio', true);
+      .iRadio_isChecked(selector, true);
   });
 
   it('期望禁用', () => {
@@ -15,10 +18,10 @@ describe('component Radio', () => {
         disabled: false,
       },
     })
-      .iRadio_disabled('demo-radio', false)
+      .iRadio_disabled(selector, false)
       .get('@vue')
       .invoke('setProps', { disabled: true })
-      .iRadio_disabled('demo-radio', true);
+      .iRadio_disabled(selector, true);
   });
 
   it('期望文本显示abc', () => {
@@ -27,13 +30,15 @@ describe('component Radio', () => {
         label: 'abc',
       },
     })
-      .iRadio_haveLabel('demo-radio', 'abc')
+      .iRadio_haveLabel(selector, 'abc')
       .get('@vue')
       .invoke('setProps', { label: 'xyz' })
-      .iRadio_haveLabel('demo-radio', 'xyz');
+      .iRadio_haveLabel(selector, 'xyz');
   });
 
   describe('component RadioGroup', () => {
+    const selector = '[data-cy="demo-radio-group"]';
+
     const dataSource = [
       { label: '111', key: '1' },
       { label: '222', key: '2' },
@@ -45,10 +50,10 @@ describe('component Radio', () => {
           dataSource,
         },
       })
-        .iRadioGroup_isChecked('demo-radio-group', '222')
+        .iRadioGroup_isChecked(selector, '222')
         .get('@vue')
         .invoke('setProps', { value: '1' })
-        .iRadioGroup_isChecked('demo-radio-group', '111');
+        .iRadioGroup_isChecked(selector, '111');
     });
 
     it('期望禁用', () => {
@@ -58,10 +63,10 @@ describe('component Radio', () => {
           dataSource,
         },
       })
-        .iRadioGroup_disabled('demo-radio-group')
+        .iRadioGroup_disabled(selector)
         .get('@vue')
         .invoke('setProps', { disabled: false })
-        .iRadioGroup_disabled('demo-radio-group', false);
+        .iRadioGroup_disabled(selector, false);
     });
 
     it('期望改变选值', () => {
@@ -70,9 +75,9 @@ describe('component Radio', () => {
           dataSource,
         },
       })
-        .iRadioGroup_isChecked('demo-radio-group', '2')
-        .iRadioGroup_check('demo-radio-group', '1')
-        .iRadioGroup_isChecked('demo-radio-group', '111');
+        .iRadioGroup_isChecked(selector, '2')
+        .iRadioGroup_check(selector, '1')
+        .iRadioGroup_isChecked(selector, '111');
     });
   });
 });
