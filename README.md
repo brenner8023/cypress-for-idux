@@ -50,7 +50,7 @@
 - [x] Comment 评论
 - [x] Empty 空数据
 - [ ] List 列表
-- [ ] Popover 气泡卡片
+- [x] Popover 气泡卡片
 - [x] Statistic 统计数值
 - [x] Table 表格
 - [x] Tabs 标签页

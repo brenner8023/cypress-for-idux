@@ -22,20 +22,16 @@ export default {
   },
   /** 断言是否存在 */
   iPopover_exist(selector: string, exist = true) {
-    if (exist) {
-      return cy.get(selector)
-        .should('exist');
-    }
-    return cy.get(selector)
-      .should('not.exist');
+    const container = cy.get(selector);
+    return exist
+      ? container.should('exist')
+      : container.should('not.exist');
   },
   /** 断言是否显示 */
   iPopover_visible(selector: string, visible = true) {
-    if (visible) {
-      return cy.get(selector)
-        .should('be.visible');
-    }
-    return cy.get(selector)
-      .should('not.be.visible');
+    const container = cy.get(selector);
+    return visible
+      ? container.should('be.visible')
+      : container.should('not.be.visible');
   },
 };
