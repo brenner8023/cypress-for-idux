@@ -26,7 +26,7 @@ export default {
   /** 点击关闭图标 */
   iModal_clickToHide() {
     return cy.get(selector)
-      .find('.ix-header-content')
+      .find('.ix-header')
       .find('.ix-header-suffix')
       .click();
   },
@@ -45,8 +45,8 @@ export default {
   /** 断言弹窗是否可关闭 */
   iModal_closable(closable = true) {
     const icon = cy.get(selector)
-      .find('.ix-header-content')
-      .find('.ix-icon-close');
+      .find('.ix-header')
+      .find('.ix-icon-dialog-close');
     return closable ?
       icon.should('exist') :
       icon.should('not.exist');

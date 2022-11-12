@@ -82,21 +82,20 @@ export default {
 };
 
 const isPageBtnDisabled = (isPrevPageBtn: boolean, selector: ContainerSelector, disabled: boolean) => {
-  let tmp = getContainer(selector).find('.ix-pagination-item.ix-pagination-item-button');
 
-  tmp = isPrevPageBtn ? tmp.first() : tmp.last();
-
-  tmp.find('.ix-button');
+  const tmp = isPrevPageBtn
+    ? getContainer(selector).find('.ix-pagination-item.ix-pagination-item-prev')
+    : getContainer(selector).find('.ix-pagination-item.ix-pagination-item-next');
 
   return disabled ?
-    tmp.should('have.attr', 'disabled') :
-    tmp.should('not.have.attr', 'disabled');
+    tmp.should('have.class', 'ix-pagination-item-disabled') :
+    tmp.should('not.have.class', 'ix-pagination-item-disabled');
 };
 
 const pageBtnClick = (isPrevPageBtn: boolean, selector: ContainerSelector) => {
-  let tmp = getContainer(selector).find('.ix-pagination-item.ix-pagination-item-button');
+  const tmp = isPrevPageBtn
+    ? getContainer(selector).find('.ix-pagination-item.ix-pagination-item-prev')
+    : getContainer(selector).find('.ix-pagination-item.ix-pagination-item-next');
 
-  tmp = isPrevPageBtn ? tmp.first() : tmp.last();
-
-  return tmp.find('.ix-button').click();
+  return tmp.click();
 };

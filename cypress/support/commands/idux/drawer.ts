@@ -11,7 +11,7 @@ export default {
   /** 点击关闭图标 */
   iDrawer_clickCloseIcon() {
     return cy.get(selector)
-      .find('.ix-header-content .ix-header-suffix')
+      .find('.ix-header .ix-header-suffix')
       .click();
   },
   /** 断言抽屉是否展示 */

@@ -22,8 +22,8 @@ specifiers:
   vue-tsc: ^0.35.2
 
 dependencies:
-  '@idux/cdk': 1.0.2_vue@3.2.37
-  '@idux/components': 1.0.2_vue@3.2.37
+  '@idux/cdk': 1.1.0_vue@3.2.37
+  '@idux/components': 1.1.0_vue@3.2.37
   cypress-real-events: 1.7.1_cypress@10.4.0
   pinia: 2.0.17_j6bzmzd4ujpabbp5objtwxyjp4
   vite-plugin-static-copy: 0.9.0_vite@2.9.14
@@ -134,8 +134,8 @@ packages:
       '@hapi/hoek': 9.3.0
     dev: true
 
-  /@idux/cdk/1.0.2_vue@3.2.37:
-    resolution: {integrity: sha512-aJvSUYMQBSfKQ62UKA413A1vSpQvSm9G9bBNbcn8ejDjrbE/E640+reF+LO6PGTKDZeg+8cqEaBLiKglR5Hybg==}
+  /@idux/cdk/1.1.0_vue@3.2.37:
+    resolution: {integrity: sha512-WmONpzbQAy4W09MCgD3mgn7u8/Rf7p/XgVcBeW4B96FVeqR6YFPVqeiVJFdHw/AEebVcPeNtnyAVGHGLj7dfjQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -144,12 +144,12 @@ packages:
       vue: 3.2.37
     dev: false
 
-  /@idux/components/1.0.2_vue@3.2.37:
-    resolution: {integrity: sha512-qSrtIOXxuOHSniqEdh796kTGsjldbVNR+0MzUeLSv6u+VdTbmYb7vhlDNEl6zRt1BXx8BN5Sk3rns4XIpML7EA==}
+  /@idux/components/1.1.0_vue@3.2.37:
+    resolution: {integrity: sha512-VpqiU6QdzIdYqhr2IJl1mSDr4Cx9aoHH/evFcaTv1t3jXvbZ6LgXTM/b1XgXUGk+JDaKLKG42gp+LqvdktYn0Q==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@idux/cdk': 1.0.2_vue@3.2.37
+      '@idux/cdk': 1.1.0_vue@3.2.37
       date-fns: 2.29.1
       lodash-es: 4.17.21
       vue: 3.2.37
