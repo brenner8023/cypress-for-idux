@@ -8,7 +8,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.3
   '@vue/test-utils': ^2.0.0
   '@vue/tsconfig': ^0.1.3
-  cypress: ^10.0.2
+  cypress: ^11.0.1
   cypress-real-events: ^1.7.1
   npm-run-all: ^4.1.5
   pinia: ^2.0.14
@@ -24,7 +24,7 @@ specifiers:
 dependencies:
   '@idux/cdk': 1.1.0_vue@3.2.37
   '@idux/components': 1.1.0_vue@3.2.37
-  cypress-real-events: 1.7.1_cypress@10.4.0
+  cypress-real-events: 1.7.1_cypress@11.0.1
   pinia: 2.0.17_j6bzmzd4ujpabbp5objtwxyjp4
   vite-plugin-static-copy: 0.9.0_vite@2.9.14
   vue: 3.2.37
@@ -36,7 +36,7 @@ devDependencies:
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.14+vue@3.2.37
   '@vue/test-utils': 2.0.2_vue@3.2.37
   '@vue/tsconfig': 0.1.3_@types+node@16.11.47
-  cypress: 10.4.0
+  cypress: 11.0.1
   npm-run-all: 4.1.5
   prettier: 2.7.1
   start-server-and-test: 1.14.0
@@ -629,16 +629,16 @@ packages:
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
 
-  /cypress-real-events/1.7.1_cypress@10.4.0:
+  /cypress-real-events/1.7.1_cypress@11.0.1:
     resolution: {integrity: sha512-/Bg15RgJ0SYsuXc6lPqH08x19z6j2vmhWN4wXfJqm3z8BTAFiK2MvipZPzxT8Z0jJP0q7kuniWrLIvz/i/8lCQ==}
     peerDependencies:
       cypress: ^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x || ^10.x
     dependencies:
-      cypress: 10.4.0
+      cypress: 11.0.1
     dev: false
 
-  /cypress/10.4.0:
-    resolution: {integrity: sha512-OM7F8MRE01SHQRVVzunid1ZK1m90XTxYnl+7uZfIrB4CYqUDCrZEeSyCXzIbsS6qcaijVCAhqDL60SxG8N6hew==}
+  /cypress/11.0.1:
+    resolution: {integrity: sha512-NuEfd0Vim492RJ3m/+bbTZ3OZrqXgfAfuLaZfIQ9D5lKocS3EDr2tyAarZdAhKwLyoh7OJ33jwMeMFIDbzYqog==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
