@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.0.1
+        uses: pnpm/action-setup@v2.2.4
         with:
           version: 7.12.2
 
@@ -23,7 +23,22 @@ jobs:
         with:
           node-version: 16
           cache: "pnpm"
-      - run: pnpm install
+
+      - name: Install deps
+        run: pnpm install
+
+      # Install cypress's binary under custom directory to cache
+      - name: Set Cypress path (non-windows)
+        run: echo "CYPRESS_CACHE_FOLDER=$HOME/.cache/Cypress" >> $GITHUB_ENV
+
+      - name: Cache Cypress's binary
+        uses: actions/cache@v3
+        with:
+          key: cypress-bin-v1
+          path: ${{ env.CYPRESS_CACHE_FOLDER }}
+
+      - name: Install Cypress
+        run: pnpm exec cypress install
 
       - name: Test
         run: pnpm run test:ci
