@@ -15,6 +15,9 @@ export default defineConfig({
       bundler: 'vite',
       viteConfig: {
         configFile: '../vite.config.ts',
+        server: {
+          port: 2022,
+        },
       },
     },
     indexHtmlFile: 'cypress/support/index.html',
