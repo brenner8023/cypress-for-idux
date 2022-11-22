@@ -6,6 +6,7 @@
     "test:e2e": "start-server-and-test preview http://127.0.0.1:4173/ 'cypress open --e2e'",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:4173/ 'cypress run --e2e'",
     "test:ci-headed": "cypress run --component --config-file cypress/cypress.config.ts --headed --no-exit",
+    "test:ci-parallel": "tsx cypress/scripts/parallel.ts run --component --config-file cypress/cypress.config.ts",
     "test:ci": "cypress run --component --config-file cypress/cypress.config.ts",
     "test": "cypress open --component --config-file cypress/cypress.config.ts --browser chrome"
   },
@@ -13,6 +14,7 @@
     "@idux/cdk": "latest",
     "@idux/components": "latest",
     "cypress-real-events": "^1.7.1",
+    "fast-glob": "^3.2.12",
     "pinia": "^2.0.14",
     "vite-plugin-static-copy": "^0.9.0",
     "vue": "^3.2.36",
@@ -28,6 +30,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "start-server-and-test": "^1.14.0",
+    "tsx": "^3.12.1",
     "typescript": "~4.7.2",
     "vite": "^2.9.9",
     "vue-tsc": "^0.35.2"

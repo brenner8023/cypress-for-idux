@@ -62,7 +62,7 @@ export default {
   /** 点击选中全部或者取消选中 */
   iTable_toggleSelectAll(selector: string) {
     return cy.get(selector)
-      .find('.ix-table-thead .ix-table-selectable')
+      .find('.ix-table-thead .ix-table-cell-selectable')
       .click();
   },
   /** 获取某一行的勾选框 */
